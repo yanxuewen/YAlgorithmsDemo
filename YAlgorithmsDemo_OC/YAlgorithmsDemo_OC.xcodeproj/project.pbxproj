@@ -13,6 +13,7 @@
 		4B09895C226D575400EA9A9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B09895B226D575400EA9A9F /* Assets.xcassets */; };
 		4B09895F226D575400EA9A9F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B09895D226D575400EA9A9F /* LaunchScreen.storyboard */; };
 		4B098962226D575400EA9A9F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B098961226D575400EA9A9F /* main.m */; };
+		4B3AFEF122704DA20014C205 /* NSArray+YSort.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3AFEF022704DA20014C205 /* NSArray+YSort.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		4B09895E226D575400EA9A9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4B098960226D575400EA9A9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4B098961226D575400EA9A9F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4B3AFEEF22704DA20014C205 /* NSArray+YSort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+YSort.h"; sourceTree = "<group>"; };
+		4B3AFEF022704DA20014C205 /* NSArray+YSort.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+YSort.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,8 @@
 				4B098953226D575200EA9A9F /* AppDelegate.m */,
 				4B098955226D575200EA9A9F /* ViewController.h */,
 				4B098956226D575200EA9A9F /* ViewController.m */,
+				4B3AFEEF22704DA20014C205 /* NSArray+YSort.h */,
+				4B3AFEF022704DA20014C205 /* NSArray+YSort.m */,
 				4B098958226D575200EA9A9F /* Main.storyboard */,
 				4B09895B226D575400EA9A9F /* Assets.xcassets */,
 				4B09895D226D575400EA9A9F /* LaunchScreen.storyboard */,
@@ -144,6 +149,7 @@
 				4B098957226D575200EA9A9F /* ViewController.m in Sources */,
 				4B098962226D575400EA9A9F /* main.m in Sources */,
 				4B098954226D575200EA9A9F /* AppDelegate.m in Sources */,
+				4B3AFEF122704DA20014C205 /* NSArray+YSort.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

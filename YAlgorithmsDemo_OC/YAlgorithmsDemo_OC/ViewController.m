@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "NSArray+YSort.h"
 
 @interface ViewController ()
 
@@ -33,8 +34,22 @@
     
     NSInteger len = [self lengthOfLongestSubstring:@"abcaacdawaa"];
     NSLog(@"lengthOfLongestSubstring len:%zi",len);
+    len = [self lengthOfLongestSubstring:@"abcabbacab"];
+    NSLog(@"lengthOfLongestSubstring len:%zi",len);
+    
+    
+    [self soatArray];
 }
 
+#pragma mark - 排序
+- (void)soatArray {
+    NSArray *arr = @[@3,@5,@7,@1,@9,@11];
+    NSArray *sortArr = [arr YSortBubble];
+    NSLog(@"YSortBubble sortArr:%@",sortArr);
+    
+    sortArr = [arr YSortSelection];
+    NSLog(@"YSortSelection sortArr:%@",sortArr);
+}
 
 #pragma mark - 爬台阶问题-递归
 - (NSInteger)climbingStairsFun:(NSInteger)n {
@@ -74,6 +89,7 @@
     return temp;
 }
 
+#pragma mark - 不重复最长子串
 - (NSInteger)lengthOfLongestSubstring:(NSString *)str {
     /*
      Q:给定一个字符串，找出不含有重复字符的最长子串的长度
@@ -82,7 +98,7 @@
         freq[] 记录每个字符出现的次数
         在每次循环里逐渐改变窗口, 维护freq, 并记录当前窗口中的最大值
      */
-    int freq[128] = {0};
+    char freq[128] = {0};
     int l = 0, r = -1; //滑动窗口为s[l...r]
     int res = 0;
     
