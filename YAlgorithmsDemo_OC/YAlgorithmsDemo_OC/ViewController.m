@@ -43,12 +43,18 @@
 
 #pragma mark - 排序
 - (void)soatArray {
-    NSArray *arr = @[@3,@5,@7,@1,@9,@11];
+    NSArray *arr = @[@3,@13,@5,@7,@17,@1,@9,@11];
     NSArray *sortArr = [arr YSortBubble];
     NSLog(@"YSortBubble sortArr:%@",sortArr);
     
     sortArr = [arr YSortSelection];
     NSLog(@"YSortSelection sortArr:%@",sortArr);
+    
+    sortArr = [arr YSortInsert];
+    NSLog(@"YSortInsert sortArr:%@",sortArr);
+    
+    sortArr = [arr YSortShell];
+    NSLog(@"YSortShell sortArr:%@",sortArr);
 }
 
 #pragma mark - 爬台阶问题-递归

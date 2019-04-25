@@ -18,6 +18,12 @@ NS_ASSUME_NONNULL_BEGIN
 /// 选择排序
 - (NSArray<NSNumber *> *)YSortSelection;
 
+/// 插入排序
+- (NSArray<NSNumber *> *)YSortInsert;
+
+/// 希尔排序
+- (NSArray<NSNumber *> *)YSortShell;
+
 @end
 
 NS_ASSUME_NONNULL_END
