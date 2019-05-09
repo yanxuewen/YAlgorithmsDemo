@@ -43,7 +43,7 @@
 
 #pragma mark - 排序
 - (void)soatArray {
-    NSArray *arr = @[@3,@13,@5,@7,@17,@1,@9,@11];
+    NSArray *arr = @[@3,@13,@5,@23,@7,@17,@1,@9,@11];
     NSArray *sortArr = [arr YSortBubble];
     NSLog(@"YSortBubble sortArr:%@",sortArr);
     

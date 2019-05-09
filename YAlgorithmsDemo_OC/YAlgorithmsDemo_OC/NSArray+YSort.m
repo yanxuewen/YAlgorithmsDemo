@@ -106,22 +106,22 @@
  */
 - (NSArray<NSNumber *> *)YSortShell {
     NSMutableArray *arr = self.mutableCopy;
-    NSInteger step = arr.count / 2;
+    NSInteger step = self.count / 2;
     NSNumber *temp = nil;
     NSInteger j = 0;
     while (step > 0) {
         for (NSInteger i = step; i < arr.count; i ++) {
             temp = arr[i];
-            j = i;
-            while (j > i%step && [temp compare:arr[j-step]] == NSOrderedAscending) {
-                arr[j] = arr[j-step];
+            j = i - step;
+            while (j >= 0 && [temp compare:arr[j]] == NSOrderedAscending) {
+                arr[j+step] = arr[j];
                 j -= step;
             }
-            if (j != i) {
-                arr[j] = temp;
+            if (j != i - step) {
+                arr[j + step] = temp;
             }
         }
-        step /= 2;
+        step = round(step / 3.0);       // 保证能执行 step == 1 的情况
     }
     return arr.copy;
 }
