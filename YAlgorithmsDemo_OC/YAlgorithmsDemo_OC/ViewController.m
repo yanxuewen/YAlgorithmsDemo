@@ -55,6 +55,9 @@
     
     sortArr = [arr YSortShell];
     NSLog(@"YSortShell sortArr:%@",sortArr);
+    
+    sortArr = [arr YSortQuick];
+    NSLog(@"YSortQuick sortArr:%@",sortArr);
 }
 
 #pragma mark - 爬台阶问题-递归

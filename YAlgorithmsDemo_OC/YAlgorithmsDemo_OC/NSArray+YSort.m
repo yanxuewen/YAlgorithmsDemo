@@ -126,4 +126,40 @@
     return arr.copy;
 }
 
+/*
+ 快速排序:
+ 从数列中挑出一个元素，称为 “基准”（pivot）;
+ 
+ 重新排序数列，所有元素比基准值小的摆放在基准前面，所有元素比基准值大的摆在基准的后面（相同的数可以到任一边）。在这个分区退出之后，该基准就处于数列的中间位置。这个称为分区（partition）操作；
+ 
+ 递归地（recursive）把小于基准值元素的子数列和大于基准值元素的子数列排序；
+ */
+- (NSArray<NSNumber *> *)YSortQuick {
+    NSMutableArray *arr = self.mutableCopy;
+    [self y_quickSortWith:arr left:0 right:arr.count - 1];
+    return arr.copy;
+}
+
+- (NSMutableArray *)y_quickSortWith:(NSMutableArray *)arr left:(NSInteger)left right:(NSInteger)right {
+    if (left < right) {
+        NSInteger partitionIndex = [self y_partitionWith:arr left:left right:right];//partition(arr, left, right);
+        [self y_quickSortWith:arr left:left right:partitionIndex - 1];
+        [self y_quickSortWith:arr left:partitionIndex + 1 right:right];
+    }
+    return arr;
+}
+
+- (NSInteger)y_partitionWith:(NSMutableArray *)arr left:(NSInteger)left right:(NSInteger)right {
+    NSInteger pivot = left;
+    NSInteger index = pivot + 1;
+    for (NSInteger i = index; i <= right; i++) {
+        if ([arr[i] compare:arr[pivot]] == NSOrderedAscending) {
+            [arr exchangeObjectAtIndex:i withObjectAtIndex:index];
+            index++;
+        }
+    }
+    [arr exchangeObjectAtIndex:pivot withObjectAtIndex:index-1];
+    return index - 1;
+}
+
 @end

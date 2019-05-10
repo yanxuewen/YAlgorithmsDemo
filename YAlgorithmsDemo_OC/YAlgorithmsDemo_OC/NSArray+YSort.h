@@ -24,6 +24,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// 希尔排序
 - (NSArray<NSNumber *> *)YSortShell;
 
+/// 快速排序
+- (NSArray<NSNumber *> *)YSortQuick;
+
 @end
 
 NS_ASSUME_NONNULL_END
